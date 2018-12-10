@@ -1,0 +1,32 @@
+<mat-card  *ngIf="videos">
+    <mat-card-content class="p-2">
+        <div class="row ">
+            <div class="div-item">
+                <div class="row mb-3 video-item" *ngFor="let video of videos" (click)="selectVideo(video)">
+                    <div class="col-md-5 px-2">
+                        <img [src]="video.snippet.thumbnails.high.url" class="img-fluid"
+                             alt="Photo of a Shiba Inu">
+                    </div>
+                    <div class="col-md-7 px-2">
+
+                        <div class="title-video">
+                            {{video.snippet.title}}
+                        </div>
+                        <div class="views-cont">
+                            <i class="material-icons">
+                                visibility
+                            </i>
+                            <span class="text">{{video.statistics.viewCount }} views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="padding-left: 30px;padding-right: 25px;" (click)="listVideoByChannel()">
+                <mat-spinner *ngIf="loading" [diameter]="30" class="m-auto"></mat-spinner>
+                <button mat-stroked-button *ngIf="!loading" class="list-btn-see-more" disabled>CARREGAR MAIS VIDEOS...</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.mat-toolbar{
+  background-color: #a21052;
+}
+.menu-right{
+  float: right;
+}
+
+.page-title {
+  color: #a21052;
+}
+
+.menu-left{
+  float: left;
+  display: block;
+}
+.container{
+  padding: 0px 100px;
+}
+.material-icons{
+  vertical-align: middle;
+}
+.header{
+  color: white;
+}
+.header-default{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.title-video{
+  color: #a21052;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.blue{
+  color: #62b5d8;
+}
+.darkRed{
+  color: #a21052;
+}
+.grey{
+  color: #777;
+}
+.inline{
+  display: inline-block;
+}
+.mat-home-principal{
+  max-height:150px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.normal-div{
+  max-height:400px;
+  overflow: auto ;
+  overflow-y: scroll;
+}
+.tooltip-style{
+  background-color: #ffffff!important;
+  color: black!important;
+  border: 2px solid #c3c3c3;
+}
+.home-btn-see-more{
+  height: 50px;
+  margin-top: -50px!important;
+  width: 100%!important;
+  display: block!important;
+  background-color: #ffffff!important;
+  opacity: 0.7;
+}
+.mat-menu-content{
+  width: 200px!important;
+}
+.matMenu button:focus{
+  border: none;
+  outline: transparent;
+}
+
+.mat-toolbar-single-row button:focus{
+  border: none;
+  outline: transparent;
+}
+
+.btn-search {
+  width: 250px;
+  float: right;
+  background-color: darkred;
+  color: white;
+  border-color: #ffffff;
+}
+
+.visible{
+  display: none;
+}

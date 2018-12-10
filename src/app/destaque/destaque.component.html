@@ -1,0 +1,12 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 class="mb-3 page-title">Vídeo em Destaque</h3>
+            <app-video [video]="video" *ngIf="video"></app-video>
+        </div>
+        <div class="col-md-4">
+            <h3 class="mb-3 page-title">+ Vídeos</h3>
+            <app-list-videos (selected)="onSelected($event)"></app-list-videos>
+        </div>
+    </div>
+</div>

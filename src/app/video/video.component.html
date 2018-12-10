@@ -1,0 +1,45 @@
+<iframe width="100%" height="270" [src]="video.urlPlayer" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+<mat-card class="mat-home-principal" [class.normal-div]="seeMore"
+          style=" box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);">
+  <div class="row">
+    <div class="col-md-9">
+      <mat-card-title class="title-video">{{ video.snippet.title }}</mat-card-title>
+    </div>
+    <div class="col-md-3">
+      <div class="menu-right blue">
+                    <span mat-button class="menu-left" style="margin-right: 10px;">
+                        <span mat-raised-button style="background-color: #ffffff; color: black"
+                              [matTooltip]="video.statistics.viewCount+ ' views'"
+                              matTooltipPosition="above"
+                              aria-label=""
+                              matTooltipClass="tooltip-style">
+                          <i class="material-icons blue"> visibility </i>
+                        </span>
+                    </span>
+        <span mat-button class="menu-right">
+                        <span mat-raised-button style="background-color: #ffffff; color: black"
+                              [matTooltip]="video.snippet.publishedAt | date: 'MMMM d, y'"
+                              matTooltipPosition="above"
+                              aria-label=""
+                              matTooltipClass="tooltip-style">
+                          <i class="material-icons blue"> schedule </i>
+                        </span>
+                    </span>
+      </div>
+    </div>
+
+    <mat-card-subtitle style="padding: 10px; margin-top: 35px;">
+      <p [innerHtml]="video.snippet.description | nl2br"></p>
+    </mat-card-subtitle>
+
+  </div>
+</mat-card>
+<div class="row" *ngIf="!seeMore">
+  <div class="col-md-12">
+    <a mat-flat-button class="home-btn-see-more" (click)="seeMore=true"
+       style="width: 100%"></a>
+  </div>
+</div>
