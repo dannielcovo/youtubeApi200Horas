@@ -21,6 +21,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatDialogModule} from '@angular/material';
 import { VideoComponent } from './video/video.component';
+import { CommonModule } from '@angular/common';
+import { NumberPipe } from './number.pipe';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { VideoComponent } from './video/video.component';
         FormatDataPipe,
         AllVideosComponent,
         DestaqueComponent,
-        VideoComponent
+        VideoComponent,
+        NumberPipe
     ],
     imports: [
         BrowserModule,
@@ -48,7 +51,8 @@ import { VideoComponent } from './video/video.component';
         MatInputModule,
         MatFormFieldModule,
         MatProgressSpinnerModule,
-        MatDialogModule
+        MatDialogModule,
+        CommonModule
     ],
     providers: [],
     entryComponents: [

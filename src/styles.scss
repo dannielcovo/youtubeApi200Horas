@@ -1,6 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$color_redBlack: #a21052;
+$color_write: #fff;
+@function changeColor($color){
+  @return darken($color,20%);
+}
+
+@mixin TitleVideo($color){
+  color: $color;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .mat-toolbar{
   background-color: #a21052;
 }
@@ -23,7 +38,7 @@
   vertical-align: middle;
 }
 .header{
-  color: white;
+  color: $color_write;
 }
 .header-default{
   font-size: 16px;
@@ -31,11 +46,7 @@
 }
 
 .title-video{
-  color: #a21052;
-  font-size: 14px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  @include TitleVideo($color_redBlack);
 }
 .blue{
   color: #62b5d8;
@@ -76,24 +87,96 @@
 .mat-menu-content{
   width: 200px!important;
 }
-.matMenu button:focus{
-  border: none;
-  outline: transparent;
+.matMenu {
+  button:focus{
+    border: none;
+    outline: transparent;
+  }
 }
 
-.mat-toolbar-single-row button:focus{
-  border: none;
-  outline: transparent;
+  .visible{
+    display: block;
+  }
+  .invisible {
+    display: none;
+  }
+
+  top-bar {
+    height: 35px;
+    width: 100%;
+    padding-top: 5px;
+    background-color: #000;
+  }
+  .search-container {
+    max-width: 950px;
+    margin: auto;
+    padding-right: 10px;
+  }
+  .search {
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    color: #fff!important;
+    it-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    &:hover{
+      width: 200px;
+      border: 1px solid #ccc;
+      background-color: darkred;
+    }
+    &:focus{
+      background-color: transparent;
+    }
+  }
+.video-item {
+  opacity: 0.5;
+  cursor: pointer;
+  &:hover{
+    opacity: 1;
+  }
+}
+.inner-addon {
+  position: relative;
 }
 
-.btn-search {
-  width: 250px;
-  float: right;
-  background-color: darkred;
-  color: white;
-  border-color: #ffffff;
+/* style icon */
+.inner-addon {
+  .glyphicon {
+    position: absolute;
+    pointer-events: none;
+  }
 }
 
-.visible{
-  display: none;
+/* align icon */
+.left-addon {
+  .glyphicon  {
+    left:  0px;
+  }
 }
+.right-addon {
+  .glyphicon {
+    right: 0px;
+  }
+}
+
+/* add padding  */
+.left-addon {
+  input  { padding-left:  30px; }
+}
+.right-addon {
+  input { padding-right: 30px; }
+}
+
+.glyphicon-search{
+  z-index: 1000;
+  color: #fff;
+}
+
+.form-control{
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+

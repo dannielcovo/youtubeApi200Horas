@@ -39,7 +39,7 @@ export class AllVideosComponent implements OnInit {
     listVideoByChannel() {
         this.loading = true;
         this.youtubeService
-            .search(this.nextPage, 12, this.query)
+            .sexarch(this.nextPage, 12, this.query)
             .subscribe(videos => {
                 this.loading = false;
                 this.data = videos;

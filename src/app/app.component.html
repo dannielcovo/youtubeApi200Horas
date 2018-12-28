@@ -1,3 +1,4 @@
+
 <mat-menu #menu="matMenu" class="matMenu">
     <button mat-menu-item routerLink="/">
         <i class="material-icons darkRed"> star_border </i>
@@ -9,29 +10,34 @@
     </button>
 </mat-menu>
 
+
 <mat-toolbar>
     <div class="container header">
 
         <div class="row">
-
-            <div class="col-md-3">
+            <div class="d-sm-block col-auto d-none">
                 <span mat-button class="title-menu">
                     <i class="material-icons">play_circle_outline</i>
                     <span class="header-default"> Fictícia Vídeos</span>
                 </span>
             </div>
 
-            <div class="col-md-6">
-                <form (submit)="search()">
-                    <input matInput [class.normal-div]="visible" class="form-control btn-search" name="query" [(ngModel)]="query" type="text" placeholder="">
-                </form>
+            <div class="col">
+                <div class="input-group top-bar" style="display: block;">
+                    <form (submit)="search()" style="float: right;">
+                        <div class="inner-addon right-addon">
+                            <button mat-icon-button class=" glyphicon glyphicon-search" (click)="click()" style="">
+                                <mat-icon>search</mat-icon>
+                            </button>
+                            <input type="text" class="form-control search" name="query" [(ngModel)]="query" placeholder="" />
+                        </div>
+
+                    </form>
+                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-auto">
                 <button mat-button class="float-right" [matMenuTriggerFor]="menu">
                     Menu <mat-icon>dehaze</mat-icon>
-                </button>
-                <button mat-icon-button class="float-right" (click)="visible=true">
-                    <mat-icon>search</mat-icon>
                 </button>
             </div>
 

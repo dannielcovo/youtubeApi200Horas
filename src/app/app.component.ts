@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 export class AppComponent implements OnInit {
 
     query;
-    visible = false;
+    visible = 'visible';
 
     constructor(private router: Router) { }
 
@@ -24,5 +24,11 @@ export class AppComponent implements OnInit {
             this.router.navigate(['/query/' + this.query]);
         }
     }
-
+    click() {
+        console.log(this.visible);
+        if (this.visible == 'visible')
+            this.visible = 'invisible';
+        else
+            this.visible = 'visible';
+        }
 }

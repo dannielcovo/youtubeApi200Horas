@@ -1,0 +1,182 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.mat-toolbar {
+  background-color: #a21052;
+}
+
+.menu-right {
+  float: right;
+}
+
+.page-title {
+  color: #a21052;
+}
+
+.menu-left {
+  float: left;
+  display: block;
+}
+
+.container {
+  padding: 0px 100px;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.header {
+  color: #fff;
+}
+
+.header-default {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.title-video {
+  color: #a21052;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.blue {
+  color: #62b5d8;
+}
+
+.darkRed {
+  color: #a21052;
+}
+
+.grey {
+  color: #777;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.mat-home-principal {
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.normal-div {
+  max-height: 400px;
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.tooltip-style {
+  background-color: #ffffff !important;
+  color: black !important;
+  border: 2px solid #c3c3c3;
+}
+
+.home-btn-see-more {
+  height: 50px;
+  margin-top: -50px !important;
+  width: 100% !important;
+  display: block !important;
+  background-color: #ffffff !important;
+  opacity: 0.7;
+}
+
+.mat-menu-content {
+  width: 200px !important;
+}
+
+.matMenu button:focus {
+  border: none;
+  outline: transparent;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}
+
+top-bar {
+  height: 35px;
+  width: 100%;
+  padding-top: 5px;
+  background-color: #000;
+}
+
+.search-container {
+  max-width: 950px;
+  margin: auto;
+  padding-right: 10px;
+}
+
+.search {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  color: #fff !important;
+  it-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.search:hover {
+  width: 200px;
+  border: 1px solid #ccc;
+  background-color: darkred;
+}
+.search:focus {
+  background-color: transparent;
+}
+
+.video-item {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.video-item:hover {
+  opacity: 1;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon {
+  left: 0px;
+}
+
+.right-addon .glyphicon {
+  right: 0px;
+}
+
+/* add padding  */
+.left-addon input {
+  padding-left: 30px;
+}
+
+.right-addon input {
+  padding-right: 30px;
+}
+
+.glyphicon-search {
+  z-index: 1000;
+  color: #fff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

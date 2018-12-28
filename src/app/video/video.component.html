@@ -1,6 +1,7 @@
 <iframe width="100%" height="270" [src]="video.urlPlayer" frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+        allowfullscreen>
+</iframe>
 
 <mat-card class="mat-home-principal" [class.normal-div]="seeMore"
           style=" box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);">
@@ -12,7 +13,7 @@
       <div class="menu-right blue">
                     <span mat-button class="menu-left" style="margin-right: 10px;">
                         <span mat-raised-button style="background-color: #ffffff; color: black"
-                              [matTooltip]="video.statistics.viewCount+ ' views'"
+                              [matTooltip]="(video.statistics.viewCount | number) + ' views'"
                               matTooltipPosition="above"
                               aria-label=""
                               matTooltipClass="tooltip-style">
@@ -20,8 +21,9 @@
                         </span>
                     </span>
         <span mat-button class="menu-right">
+             <!--date: 'MMMM d, y'-->
                         <span mat-raised-button style="background-color: #ffffff; color: black"
-                              [matTooltip]="video.snippet.publishedAt | date: 'MMMM d, y'"
+                              [matTooltip]="video.snippet.publishedAt | formatData"
                               matTooltipPosition="above"
                               aria-label=""
                               matTooltipClass="tooltip-style">

@@ -1,5 +1,6 @@
 import {Component, Inject, Input, OnInit, Optional} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material';
+import {formatNumber} from '@angular/common';
 
 @Component({
     selector: 'app-video',
